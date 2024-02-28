@@ -1,31 +1,327 @@
 .App {
   text-align: center;
+  background-color: rgba(223, 219, 219, 0.888);
+  padding: 2px;
+  width: 97vw;
+  /* height: 100vh; */
+  /* overflow: scroll; */
 }
+
+.App-main-container{
+  display: flex;
+  gap: 10px;
+}
+@media screen and (max-width: 569px) {
+  /* .App-main-container{
+    flex-direction: column;
+  } */
+  
+}
+
+
+.logo-container{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #333;
+}
+
+.menu-icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1%;
+  margin-bottom: 5px;
+}
+
+.dashboard-container {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dashboard-container li {
+  cursor: pointer;
+  padding: 10px;
+  border-right: 2px solid transparent; /* Add transparent border initially */
+  height: 50px; /* Set height of menu items */
+  line-height: 50px; /* Vertically center content */
+}
+
+.dashboard-container li p {
+  margin: 0; /* Remove default margins */
+}
+
+.dashboard-container li.active {
+  background-color: rgb(166, 209, 211);
+  border-right: 5px solid #00f; /* Only right border */
+  border-left: none; /* No left border */
+  border-top: none; /* No top border */
+  border-bottom: none; /* No bottom border */
+  color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+
+
+  .dashboard-container {
+      display: none; /* Hide menu items by default on small screens */
+      width: 100%; /* Take full width */
+  }
+
+  .dashboard-container.active {
+      display: block; /* Show menu items when menu is open */
+  }
+}
+
 
 .App-logo {
-  height: 40vmin;
+  height: 40px;
   pointer-events: none;
 }
+.card-elements{
+  display: flex;
+  justify-content: space-around;
+  overflow: auto;
+  width: 40%;
+}
+.button-cards2{
+  color: rgb(45, 230, 45);
+}
+.button-cards3{
+  color: red;
+}
 
+
+td, th {
+  padding: 8px;
+}
+/* tr td:last-child {
+  border-bottom: none;
+} */
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
+  
+}
+.nav-header{
+  display: flex;
+  justify-content: space-around;
+  /* align-items: ; */
+  width: 70%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app-nav-bar {
+  background-color: #fff;
+  min-height: 8vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
+  /* align-items: flex-end; */
+  background-size: cover;
   font-size: calc(10px + 2vmin);
-  color: white;
+  box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.5);
+  
 }
 
 .App-link {
   color: #61dafb;
+}
+
+.App-header{
+  display: flex;
+  width: 20%;
+  background-color: #fff;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-y: hidden;
+
+  box-shadow: 5px 0px 10px -5px rgba(0, 0, 0, 0.5);
+}
+
+
+.refresh-button{
+
+  outline: none;
+  border: lightgray, solid, 1px;
+}
+.refresh-button:hover{
+  border: rgb(255, 255, 255), solid, 2px;
+  
+  border: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .refresh-button {
+    animation: App-logo-spin infinite 2s linear;
+  }
+}
+button{
+  border: lightgray, solid, 1px;
+  outline: none;
+}
+
+.bag{
+  color: green;
+  height: 40px;
+  width: 30px;
+}
+.button-cards{
+  margin-right: 8px;
+  outline: none;
+  border: lightgray, solid, 1px;
+}
+.button-cards2{
+  margin-right: 8px;
+  outline: none;
+
+  border: rgb(255, 255, 255), solid, 1px;
+  color: rgb(178, 171, 171);
+}
+.button-cards2:hover{
+  margin-right: 8px;
+  outline: none;
+  border: rgb(255, 255, 255), solid, transparent;
+  
+  border: none;
+  color: rgb(178, 171, 171);
+}
+
+li{
+  list-style-type: none;
+}
+
+.dashboard-container {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dashboard-container li {
+  cursor: pointer;
+  padding: 10px;
+}
+
+.dashboard-container li:hover {
+  background-color: #f0f0f0;
+}
+
+.dashboard-container li.active{
+  background-color: rgb(187, 220, 222);
+  border-right: 5px solid #00f; /* Only right border */
+    /* border-left: none; 
+    border-top: none; 
+    border-bottom: none;  */
+  color: rgb(82, 129, 240);
+}
+
+.close-button {
+  background-color: #f0f0f0;
+  border: none;
+  color: rgb(82, 129, 240);
+  padding: 10px;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #ccc;
+}
+
+
+
+
+.main-container-card{
+    background-color: white;
+    
+    
+}
+.list-items-container-2{
+  display: flex;
+  justify-content: space-around;
+  padding: 2%;
+  gap: 3px, 5px;
+  
+}
+.list-item-container{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+input{
+  height: fit-content;
+  border-radius: 20px;
+  padding: 2%;
+  outline: none;
+}
+p{
+  margin-right: 8px;
+}
+
+
+.list-items1 {
+  cursor: pointer; /* Add pointer cursor to indicate clickable */
+  padding: 5px; /* Add padding for better spacing */
+}
+
+.list-items1:hover {
+  background-color: #f0f0f0; /* Change background color on hover */
+}
+
+.list-items1.active {
+  /* background-color: #00f; Change background color for active item */
+  color: rgb(82, 129, 240);; /* Change text color for active item */
+  padding-bottom: 20px;
+  position: relative; /* To position the bottom border */
+}
+
+.list-items1.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px; /* Height of the bottom border */
+  background-color: #00f; /* Color of the bottom border */
+}
+
+.main-container-card{
+  padding: 20px;
+}
+
+/* Change the color and size of the overflow line */
+.main-card-table-container{
+  overflow: auto; /* or overflow: scroll; */
+  
+}
+
+/* Style the scrollbar */
+.main-card-table-container::-webkit-scrollbar {
+  width: 1px; /* Width of the scrollbar */
+  height: 1px; /* Height of the scrollbar */
+}
+.para-icons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icons {
+  color: black;
+}
+/* Handle */
+.main-card-table-container::-webkit-scrollbar-thumb {
+  background: #888; /* Color of the handle */
+}
+
+/* Handle on hover */
+.main-card-table-container::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Color of the handle on hover */
+
+}
+
+.card-buttons-container{
+display: flex;
+justify-content: space-between;
+padding: 10px;
 }
 
 @keyframes App-logo-spin {
@@ -35,4 +331,80 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.view-details-container{
+  width: 100%;
+  background-color: rgb(198, 249, 254);
+  display: flex;
+  /* color: #fff; */
+  padding: 1%;
+  border-radius: 15px;
+}
+.location-main-container-first{
+  width: 35%;
+}
+.location-main-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.svg{
+  text-align: center;
+  width: 60%;
+}
+.line {
+  stroke-dasharray: 10, 10; /* Length of dashes and gaps */
+  stroke: black; /* Color of the line */
+}
+
+
+
+
+
+
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.custom-table {
+  width: 100%;
+  
+}
+
+.custom-table th, .custom-table td {
+  padding: 8px;
+  text-align: left;
+}
+
+.custom-table th {
+  border-bottom: 1px solid black; /* Single bottom line for table header */
+}
+
+.custom-table td {
+  border-bottom: 1px solid black; /* Single bottom line for table data */
+}
+
+@media (max-width: 768px) {
+  /* Responsive styles for tablets (like iPad) */
+  .custom-table th, .custom-table td {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  /* Responsive styles for mobile devices */
+  .custom-table th, .custom-table td {
+    font-size: 12px;
+  }
+}
+
+table{
+  border-collapse: collapse;
+}
+
+.no-border-bottom{
+  border: none;
 }
